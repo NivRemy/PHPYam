@@ -1,0 +1,27 @@
+.playertable {
+  display:flex;
+}
+table {
+  margin: 10px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 20%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr{
+	height: 40px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.dicevalues {
+	margin: 30px;
+}
