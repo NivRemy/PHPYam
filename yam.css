@@ -25,3 +25,20 @@ tr:nth-child(even) {
 .dicevalues {
 	margin: 30px;
 }
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding: 10px;
+}
+
+.reroll {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 1.5em;
+
+}

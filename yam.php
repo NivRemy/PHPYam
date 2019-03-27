@@ -25,6 +25,8 @@ if (isset($_POST['reset'])){
 	$game = new YamGame([$player1,$player2]);
 } else if (isset($_SESSION['yamGame'])) {
 	$game = unserialize($_SESSION['yamGame']);
+	var_dump($game->getPlayers()[0]->getBucket());
+	var_dump($game->getPlayers()[1]->getBucket());
 } else {
 	header("location: index.php");
 }
@@ -56,13 +58,13 @@ function displayDices($game){
 	$rerollsLeft = $game->getCurrentPlayerRerolls();
 			
 	foreach ($bucketValues as $key => $value) {
-		echo '<div><label>Le dé ' . $key . ' a fait ' . $value . ', relancer : </label>';
+		echo '<div class="reroll"><label>Le dé ' . $key . ' a fait ' . $value . ', relancer : </label>';
 		if ($rerollsLeft >0) {
 		echo '<input type="checkbox" name="toReroll[]" value="' . $key . '"/>';
 		}
 		echo '</div>';
 	}
-	echo '<label>Il vous reste ' . $rerollsLeft . ' lancés</label></br>';
+	echo '<label class="reroll">Il vous reste ' . $rerollsLeft . ' relances</label></br>';
 	if ($rerollsLeft >0) {
 		echo '<button type="submit">Relancer</button>';
 	}
@@ -76,11 +78,11 @@ function displayScoreTables($game){
 	foreach ($players as $idPlayer => $player) {
 		echo '<table><tr><th>Joueur</th><th>' . ($idPlayer + 1) . '  ' . $player->getName() . '</th></tr>';
 		foreach ($player->getScoreTable() as $category => $score) {
-			if (is_null($score)) {
+			if ($score === NULL) {
 				$score = 'A jouer';
 			}
 		 	echo '<tr><td>' . $category . '</td><td>' . $score . '</td>';
-		 	if ($player == $game->getCurrentPlayer() && $score == 'A jouer') {
+		 	if ($player == $game->getCurrentPlayer() && $score === 'A jouer') {
 		 		echo '<td><form method="post"><button type="submit" name="score" value="' . $category . '">Marquer</button></form></td>';
 		 	}
 		 	echo '</tr>';
