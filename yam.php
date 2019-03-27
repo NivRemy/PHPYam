@@ -25,8 +25,6 @@ if (isset($_POST['reset'])){
 	$game = new YamGame([$player1,$player2]);
 } else if (isset($_SESSION['yamGame'])) {
 	$game = unserialize($_SESSION['yamGame']);
-	var_dump($game->getPlayers()[0]->getBucket());
-	var_dump($game->getPlayers()[1]->getBucket());
 } else {
 	header("location: index.php");
 }
