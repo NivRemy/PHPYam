@@ -43,7 +43,7 @@ class Player {
 	}
 
 	public function setValue($key,$value){
-		$this->scoreTable[$key]=$value;
+			$this->scoreTable[$key]=$value;
 	}
 
 	public function getScoreTable(){

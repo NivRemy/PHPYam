@@ -15,7 +15,7 @@ td, th {
 }
 
 tr{
-	height: 40px;
+	height: 50px;
 }
 
 tr:nth-child(even) {
@@ -40,5 +40,15 @@ input[type=checkbox]
 	margin-top: 10px;
 	margin-bottom: 10px;
 	font-size: 1.5em;
+}
 
+button[type=submit]{
+  -ms-transform: scale(1.1); /* IE */
+  -moz-transform: scale(1.1); /* FF */
+  -webkit-transform: scale(1.1); /* Safari and Chrome */
+  -o-transform: scale(1.1); /* Opera */
+  font-size: 1.2em;
+}
+.newGame{
+  margin-left: 10px;
 }

@@ -16,6 +16,10 @@ class YamGame {
 		$this->players[]=$player;
 	}
 
+	public function getPlayer($idPlayer) {
+		return $this->players[$idPlayer];
+	}
+
 	public function getPlayers(){
 		return $this->players;
 	}
@@ -45,7 +49,7 @@ class YamGame {
 	public function getPlayersScores(){
 		$playersScores = [];
 		foreach ($this->players as $player) {
-			$playersScores[]=$player->getScore();
+			$playersScores[$player->getName()]=$player->getScore();
 		}
 		return $playersScores;
 	}
