@@ -28,7 +28,7 @@
 } else {
 
 	?>
-	<form method="post">
+	<form method="post" action="yam.php">
 		<label>Joueur 1</label>
 		<input type="text" name="player1" required>
 		<label>Joueur 2</label>
@@ -45,7 +45,7 @@
 			<option value="5">5</option>
 			<option value="6">6</option>
 		</select>
-		<button type="submit">Jouer</button>
+		<button class="newGame" type="submit">Jouer</button>
 	</form>
 <?php
 }

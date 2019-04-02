@@ -86,7 +86,7 @@ $_SESSION['yamGame'] = serialize($game);
 
 function displayDices($game){
 	$bucketValues = $game->getCurrentPlayer()->getBucket()->getDicesValues();
-	echo '<div class="dicevalues"><h2>' . $game->getCurrentPlayer()->getName() . ' playing</h2><form method="post" action="">';
+	echo '<div class="dicevalues"><h2>' . $game->getCurrentPlayer()->getName() . ' playing</h2><form method="post" action="yam.php">';
 	$rerollsLeft = $game->getCurrentPlayerRerolls();
 			
 	foreach ($bucketValues as $key => $value) {
@@ -117,7 +117,7 @@ function displayScoreTables($game,$endOfGame){
 			}
 		 	echo '<tr><td>' . $category . '</td><td>' . $score . '</td>';
 		 	if ($player == $game->getCurrentPlayer() && $score === 'A jouer') {
-		 		echo '<td><form method="post"><button type="submit" name="score" value="' . $category . '">Marquer</button></form></td>';
+		 		echo '<td><form method="post" action="yam.php"><button type="submit" name="score" value="' . $category . '">Marquer</button></form></td>';
 		 	}
 		 	echo '</tr>';
 		}
