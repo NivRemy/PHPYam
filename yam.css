@@ -1,6 +1,20 @@
 .playertable {
   display:flex;
 }
+
+.playmenu{
+  display: flex!important;
+}
+
+.dropdown{
+  padding-top: 10px!important;
+  padding-left: 10px!important;
+}
+
+.dropdown-menu{
+  padding: 15px!important;
+}
+
 table {
   margin: 10px;
   font-family: arial, sans-serif;
@@ -49,6 +63,7 @@ button[type=submit]{
   -o-transform: scale(1.1); /* Opera */
   font-size: 1.2em;
 }
+
 .newGame{
   margin-left: 20px;
 }
