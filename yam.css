@@ -1,3 +1,7 @@
+.diceimg{
+  width: 70px;
+}
+
 .playertable {
   display:flex;
 }

@@ -8,7 +8,7 @@ include_once 'player.php';
     <meta charset="UTF-8">
     <title>Jeu de dé</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="yam.css">
+    <link rel="stylesheet" type="text/css" href="yam.css">
 </head>
 <body>
 	<div class="container playmenu">
@@ -115,7 +115,7 @@ function displayDices($game){
 	$rerollsLeft = $game->getCurrentPlayerRerolls();
 			
 	foreach ($bucketValues as $key => $value) {
-		echo '<div class="reroll"><label>Le dé ' . ($key+1) . ' a fait ' . $value . ', relancer : </label>';
+		echo '<div class="reroll"><img class="diceimg" src="img/' . $value . '.png" alt="diceNumber' . ($key+1) . '"><label>relancer : </label>';
 		if ($rerollsLeft >0) {
 		echo '<input type="checkbox" name="toReroll[]" value="' . $key . '"/>';
 		}
