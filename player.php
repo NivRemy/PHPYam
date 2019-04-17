@@ -35,7 +35,7 @@ class Player {
 	}
 
 	private function setBucket($nbDices){
-		$this->bucket = new Bucket(5);
+		$this->bucket = new Bucket($nbDices);
 	}
 
 	public function getBucket(){

@@ -18,7 +18,7 @@ include_once 'player.php';
 	    	Nouvelle Partie
   			</button>
   			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<form method="post" action="index.php">
+				<form method="post" action="">
 					<div class="form-group">	
 						<label>Joueur 1</label>
 						<input type="text" name="player1" required>
