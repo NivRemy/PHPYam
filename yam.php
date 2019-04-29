@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once 'yamGame.php';
 include_once 'player.php';
 ?>
